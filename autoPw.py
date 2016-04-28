@@ -43,7 +43,7 @@ def checkPw(str, model=1):
                 low_num += 1
             if e in sp_str:
                 sp_num += 1
-        if num_num >= 1 and up_num >= 1 and low_num >= 1 and sp_num >= 1:
+        if num_num >0 and up_num >0 and low_num >0 and sp_num >0:
             return True
         return False
     if model == 2:
@@ -55,7 +55,7 @@ def checkPw(str, model=1):
                 up_num += 1
             if e in low_str:
                 low_num += 1
-        if num_num >= 1 and up_num >= 1 and low_num >= 1:
+        if num_num >0 and up_num >0 and low_num >0:
             return True
         return False
     return False
