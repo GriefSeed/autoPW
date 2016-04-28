@@ -11,26 +11,18 @@ low_str = string.ascii_lowercase
 sp_str = '!@#$%^&*()'
 all = []
 
-def proPwNoSp():
+def proPw( model=2 ):
     all.append(num_str)
     all.append(up_str)
     all.append(low_str)
+    if model == 1:#如果model==1，加上特殊字符，默认没有特殊字符
+        all.append(sp_str)
     pw = ''
     while len(pw) <= 11:
         ele = random.choice(all)
         pw += random.choice(ele)
     return pw
 
-def proPw():
-    all.append(num_str)
-    all.append(up_str)
-    all.append(low_str)
-    all.append(sp_str)
-    pw = ''
-    while len(pw) <= 11:
-        ele = random.choice(all)
-        pw += random.choice(ele)
-    return pw
 def checkPw(str, model=1):
     if model == 1:
         num_num, up_num, low_num, sp_num = 0,0,0,0
@@ -62,7 +54,7 @@ def checkPw(str, model=1):
 
 aim_pw = ''
 while 1:
-    aim_pw = proPwNoSp()#这里可以改成没有特殊字符的
+    aim_pw = proPw()#这里可以改成没有特殊字符的
     if checkPw(aim_pw, 2):#这里选模式，1是有特殊字符的，2是没有特殊字符的
         break
 print(aim_pw)
