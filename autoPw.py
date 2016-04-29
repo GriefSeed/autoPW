@@ -1,5 +1,6 @@
 ﻿#coding:utf-8
 '''
+这是development branch
 这个脚本用于自动生成12位的随机password，password由大小写字母、数字、特殊字符组成，并记录在
 特定的文本里,password必须保证每种字符都至少要有一个，否则重新生成
 '''
